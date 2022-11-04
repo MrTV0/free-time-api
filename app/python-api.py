@@ -1,9 +1,14 @@
 from fastapi import FastAPI
+from random import randint
 import platform
 import psutil
 import datetime
 
 app = FastAPI()
+
+@app.get("/")
+async def get_random_percentage():
+    return {'percentage': randint(0, 100)}
 
 @app.get("/device/platform")
 async def get_platform():
