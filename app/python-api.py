@@ -5,7 +5,7 @@ import datetime
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/device/platform")
 async def get_platform():
     return {'platform': platform.system(), 'datetime': datetime.datetime.now()}
 
