@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from random import randint
 
 app = FastAPI()
@@ -12,12 +13,14 @@ origins = [
     "http://127.0.0.1:5500"
 ]
 
+app.add_middleware(GZipMiddleware)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    Access-Control-Allow-Origin
 )
 
 @app.get("/percentage")
