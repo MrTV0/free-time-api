@@ -21,4 +21,4 @@ app.add_middleware(
 
 @app.get("/percentage")
 async def get_random_percentage():
-    return {'percentage': randint(0, 100)}
+    return {'percentage': 'hello world'}
