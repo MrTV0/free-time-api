@@ -5,6 +5,7 @@ from random import randint
 app = FastAPI()
 
 origins = [
+    "https://mrtv0.github.io/website/",
     "http://localhost",
     "http://localhost:8080",
     "https://localhost.tiangolo.com",
