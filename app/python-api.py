@@ -19,8 +19,7 @@ app.add_middleware(
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],
-    Access-Control-Allow-Origin
+    allow_headers=["*"]
 )
 
 @app.get("/percentage")
