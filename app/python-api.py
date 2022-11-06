@@ -26,7 +26,6 @@ app.add_middleware(
 #    price: float
 #    tax: float | None = None
 
-
 @app.get("/activity")
 async def get_activity():
     response = urlopen(activity_url)
