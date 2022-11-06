@@ -5,7 +5,8 @@ import json
 
 app = FastAPI()
 
-url = "https://yesno.wtf/api"
+url = "http://www.boredapi.com/api/activity/"
+url2 = "https://yesno.wtf/api"
 
 origins = ["*"]
 
@@ -17,15 +18,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/percentage")
+@app.get("/activity")
 async def get_random_percentage():
-    return {"title": "https://coffee.alexflipnote.dev/random"}
+    response = urlopen(url)
+    data_json = json.loads(response.read())
+    return {"activity": data_json.get("activity")}
 
 @app.get("/break")
 async def get_random_percentage():
-    response = urlopen(url)
-
-    data_json = json.loads(response.read())
-
     return [{"text": "Have a coffee!"}, {"picture": "https://coffee.alexflipnote.dev/random"}]
 
