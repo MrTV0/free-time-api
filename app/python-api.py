@@ -16,3 +16,7 @@ app.add_middleware(
 @app.get("/percentage")
 async def get_random_percentage():
     return {"title": "https://coffee.alexflipnote.dev/random"}
+
+@app.get("/prin")
+async def get_random_percentage():
+    return {"tell": "https://yesno.wtf/api"}
