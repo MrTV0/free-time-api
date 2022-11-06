@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from urllib.request import urlopen
+import json
 
 app = FastAPI()
+
+url = "https://yesno.wtf/api"
 
 origins = ["*"]
 
@@ -19,4 +23,9 @@ async def get_random_percentage():
 
 @app.get("/prin")
 async def get_random_percentage():
-    return {"tell": "https://yesno.wtf/api"}
+    response = urlopen(url)
+
+    data_json = json.loads(response.read())
+
+    return {"tell": data_json}
+
