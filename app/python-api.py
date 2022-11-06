@@ -26,5 +26,5 @@ async def get_random_percentage():
 
 @app.get("/break")
 async def get_random_percentage():
-    return [{"text": "Have a coffee!"}, {"picture": "https://coffee.alexflipnote.dev/random"}]
+    return {"text": "Have a coffee!", "picture": "https://coffee.alexflipnote.dev/random"}
 
