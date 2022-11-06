@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from urllib.request import urlopen
+from pydantic import BaseModel
 import json
 
 app = FastAPI()
@@ -17,6 +18,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+#class Item(BaseModel):
+#    name: str
+#    description: str | None = None
+#    price: float
+#    tax: float | None = None
+
 
 @app.get("/activity")
 async def get_random_percentage():
