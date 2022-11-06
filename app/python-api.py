@@ -21,11 +21,11 @@ app.add_middleware(
 async def get_random_percentage():
     return {"title": "https://coffee.alexflipnote.dev/random"}
 
-@app.get("/prin")
+@app.get("/break")
 async def get_random_percentage():
     response = urlopen(url)
 
     data_json = json.loads(response.read())
 
-    return {"tell": data_json.get("answer")}
+    return [{"text": "Have a coffee!"}, {"picture": "https://coffee.alexflipnote.dev/random"}]
 
