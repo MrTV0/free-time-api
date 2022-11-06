@@ -27,5 +27,5 @@ async def get_random_percentage():
 
     data_json = json.loads(response.read())
 
-    return {"tell": data_json}
+    return {"tell": data_json.get("answer")}
 
