@@ -15,7 +15,4 @@ app.add_middleware(
 
 @app.get("/percentage")
 async def get_random_percentage():
-    return 
-{
-"title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
-}
+    return {"title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"}
