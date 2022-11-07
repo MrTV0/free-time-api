@@ -8,7 +8,7 @@ app = FastAPI()
 
 activity_url = "http://www.boredapi.com/api/activity/"
 yesno_url = "https://yesno.wtf/api"
-coffee_url = "https://coffee.alexflipnote.dev/random"
+#coffee_url = "https://coffee.alexflipnote.dev/random"
 
 origins = ["*"]
 
@@ -34,7 +34,7 @@ async def get_activity():
 
 @app.get("/break")
 async def get_coffee():
-    response = urlopen(coffee_url)
+    response = urlopen(yesno_url)
     coffee_json = json.loads(response.read())
-    return {"text": "Have a coffee!", "picture": coffee_json.get("file")}
+    return {"text": "Have a coffee!", "picture": yesno_url.get("answer")}
 
