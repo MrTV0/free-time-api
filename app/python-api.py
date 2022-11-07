@@ -8,7 +8,7 @@ app = FastAPI()
 
 activity_url = "http://www.boredapi.com/api/activity/"
 yesno_url = "https://yesno.wtf/api"
-coffee_url = "https://coffee.alexflipnote.dev/random.json"
+coffee_url = "https://coffee.alexflipnote.dev/random"
 
 origins = ["*"]
 
