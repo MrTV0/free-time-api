@@ -25,10 +25,6 @@ app.add_middleware(
 #    price: float
 #    tax: float | None = None
 
-coffee_response = urlopen("https://coffee.alexflipnote.dev/random.json")
-coffee_json = json.loads(coffee_response.read())
-coffee = coffee.get("file")
-
 @app.get("/activity")
 async def get_random_percentage():
     response = urlopen(activity_url)
@@ -37,4 +33,7 @@ async def get_random_percentage():
 
 @app.get("/break")
 async def get_random_percentage():
+    coffee_response = urlopen("https://coffee.alexflipnote.dev/random.json")
+    coffee_json = json.loads(coffee_response.read())
+    coffee = coffee.get("file")
     return {"text": "Have a coffee!", "picture": coffee}
