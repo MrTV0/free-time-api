@@ -8,9 +8,8 @@ app = FastAPI()
 
 activity_url = "http://www.boredapi.com/api/activity/"
 yesno_url = "https://yesno.wtf/api"
-#coffee_url = "https://coffee.alexflipnote.dev/random"
 
-origins = ["*","https://coffee.alexflipnote.dev/random.json"]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -34,7 +33,4 @@ async def get_random_percentage():
 
 @app.get("/break")
 async def get_random_percentage():
-    #coffee_response = urlopen("")
-    #coffee_json = json.loads(coffee_response.read())
-    #coffee = coffee.get("file")
-    return {"text": "Have a coffee!", "picture": json.loads(urlopen("https://coffee.alexflipnote.dev/random.json").read()).get("file")}
+    return {"text": "Have a coffee!", "picture": "https://coffee.alexflipnote.dev/HrMCgJMACXc_coffee.png"}
