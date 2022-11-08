@@ -9,9 +9,6 @@ app = FastAPI()
 activity_url = "http://www.boredapi.com/api/activity/"
 yesno_url = "https://yesno.wtf/api"
 #coffee_url = "https://coffee.alexflipnote.dev/random"
-coffee_response = urlopen("https://coffee.alexflipnote.dev/random.json")
-coffee_json = json.loads(coffee_response.read())
-coffee = coffee.get("file")
 
 origins = ["*"]
 
@@ -28,6 +25,9 @@ app.add_middleware(
 #    price: float
 #    tax: float | None = None
 
+coffee_response = urlopen("https://coffee.alexflipnote.dev/random.json")
+coffee_json = json.loads(coffee_response.read())
+coffee = coffee.get("file")
 
 @app.get("/activity")
 async def get_random_percentage():
