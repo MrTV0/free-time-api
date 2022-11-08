@@ -10,7 +10,7 @@ activity_url = "http://www.boredapi.com/api/activity/"
 yesno_url = "https://yesno.wtf/api"
 #coffee_url = "https://coffee.alexflipnote.dev/random"
 
-origins = ["https://coffee.alexflipnote.dev/random.json"]
+origins = ["*","https://coffee.alexflipnote.dev/random.json"]
 
 app.add_middleware(
     CORSMiddleware,
