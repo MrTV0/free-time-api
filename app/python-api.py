@@ -37,4 +37,4 @@ async def get_random_percentage():
     #coffee_response = urlopen("")
     #coffee_json = json.loads(coffee_response.read())
     #coffee = coffee.get("file")
-    return {"text": "Have a coffee!", "picture": "https://coffee.alexflipnote.dev/random.json"}
+    return {"text": "Have a coffee!", "picture": json.loads(urlopen("https://coffee.alexflipnote.dev/random.json").read()).get("file")}
