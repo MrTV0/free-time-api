@@ -1,6 +1,6 @@
 version: "3.9"
 services:
- own-api-service:
+ randomizer-service:
   image: tarov/own-api
   ports:
     - "8000:8000"
