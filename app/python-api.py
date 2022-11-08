@@ -31,6 +31,12 @@ async def get_random_percentage():
     activity_json = json.loads(response.read())
     return {"activity": activity_json.get("activity"), "type": activity_json.get("type")}
 
+@app.get("/choise")
+async def get_random_percentage():
+    response = urlopen(yesno_url)
+    yesno_json = json.loads(response.read())
+    return {"text": yesno_json.get("answer")}
+
 @app.get("/break")
 async def get_random_percentage():
     return {"text": "Have a coffee!", "picture": "https://coffee.alexflipnote.dev/HrMCgJMACXc_coffee.png"}
