@@ -33,7 +33,7 @@ async def get_random_percentage():
 
 @app.get("/break")
 async def get_random_percentage():
-    #coffee_response = urlopen("https://coffee.alexflipnote.dev/random.json")
-    #coffee_json = json.loads(coffee_response.read())
-    #coffee = coffee.get("file")
-    return {"text": "Have a coffee!", "picture": "hello"}
+    coffee_response = urlopen("http://www.boredapi.com/api/activity/")
+    coffee_json = json.loads(coffee_response.read())
+    coffee_json.get("file")
+    return {"text": "Have a coffee!", "picture": coffee_json.get("activity")}
