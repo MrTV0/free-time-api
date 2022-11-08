@@ -6,9 +6,8 @@ import json
 
 app = FastAPI()
 
-activity_url = "http://www.boredapi.com/api/activity/"
-yesno_url = "https://yesno.wtf/api"
-#coffee_url = "https://coffee.alexflipnote.dev/random"
+url = "http://www.boredapi.com/api/activity/"
+url2 = "https://yesno.wtf/api"
 
 origins = ["*"]
 
@@ -19,22 +18,19 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 #class Item(BaseModel):
 #    name: str
 #    description: str | None = None
 #    price: float
 #    tax: float | None = None
 
+
 @app.get("/activity")
-async def get_activity():
-    response = urlopen(activity_url)
-    activity_json = json.loads(response.read())
-    return {"activity": activity_json.get("activity"), "type": activity_json.get("type")}
+async def get_random_percentage():
+    response = urlopen(url)
+    data_json = json.loads(response.read())
+    return {"activity": data_json.get("activity")}
 
 @app.get("/break")
-async def get_coffee():
-    response = urlopen(yesno_url)
-    coffee_json = json.loads(response.read())
-    return {"text": "Have a coffee!", "picture": yesno_url.get("answer")}
-
+async def get_random_percentage():
+    return {"text": "Have a coffee!", "picture": "https://coffee.alexflipnote.dev/random"}
