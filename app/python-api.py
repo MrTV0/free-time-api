@@ -28,7 +28,7 @@ async def create_item(bored: Bored):
     if bored.activity_sel:
         activity_urling = activity_url + "?type=" + bored.activity_sel
         if bored.participants_amount and bored.participants_amount > 0:
-            activity_urlings = activity_urling + "?participants=" + str(bored.participants_amount)
+            activity_urlings = activity_urling + "&participants=" + str(bored.participants_amount)
             response = urlopen(activity_urlings)
             activity_json = json.loads(response.read())
             return {"activity": activity_json.get("activity"), "type": activity_json.get("type"), "part_amount": activity_json.get("participants")}
