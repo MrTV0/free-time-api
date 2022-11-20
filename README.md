@@ -18,8 +18,7 @@ Mijn hosted front-end link: https://mrtv0.github.io/website/
 ## Postman
 Als zowel het type activiteit als het aantal deelnemers aan de activiteit niet meegegeven wordt is alles willekeurig.
 
-![activity_null_null](https://user-images.githubusercontent.com/57659923/202915866-9cae796a-f2b4-4849-a06b-d32db56de9bd.png)
-
+![activity_null_null](https://user-images.githubusercontent.com/57659923/202915866-9cae796a-f2b4-4849-a06b-d32db56de9bd.png)    
 
 Als het type activiteit word meegegeven worden er enkel activiteiten gestuurd van dat specifieke type.
 
