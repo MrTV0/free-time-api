@@ -9,7 +9,15 @@ app = FastAPI()
 activity_url = "http://www.boredapi.com/api/activity/"
 yesno_url = "https://yesno.wtf/api"
 
-origins = ["*"]
+origins = ["http://localhost",
+    "http://localhost:8080",
+    "https://localhost.tiangolo.com",
+    "http://127.0.0.1:5500",
+           "https://mrtv0.github.io/website/",
+           "https://free-time-mrtv0.cloud.okteto.net/",
+           "http://www.boredapi.com/api/activity/",
+           "https://yesno.wtf/api"
+          ]
 
 app.add_middleware(
     CORSMiddleware,
