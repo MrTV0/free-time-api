@@ -19,6 +19,8 @@ Mijn hosted front-end link: https://mrtv0.github.io/website/
 Als zowel het type activiteit als het aantal deelnemers aan de activiteit niet meegegeven wordt is alles willekeurig.
 ![activity_null_null](https://user-images.githubusercontent.com/57659923/202915866-9cae796a-f2b4-4849-a06b-d32db56de9bd.png)
 <hr>
+<hr>
+<hr>
 Als het type activiteit word meegegeven worden er enkel activiteiten gestuurd van dat specifieke type.
 ![activity_sel_null](https://user-images.githubusercontent.com/57659923/202915870-b9cccc6a-e9ea-4b26-b196-4d789db8e805.png)
 
