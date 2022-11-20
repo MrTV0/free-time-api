@@ -15,7 +15,7 @@ Mijn hosted API link: https://free-time-mrtv0.cloud.okteto.net/
 Mijn GitHub repository voor de front-end: https://github.com/MrTV0/website  
 Mijn hosted front-end link: https://mrtv0.github.io/website/
 
-De externe activiteit API: http://www.boredapi.com/api/activity/
+De externe activiteit API: http://www.boredapi.com/api/activity/  
 De externe yesno API: https://yesno.wtf/api
 
 ## Postman
