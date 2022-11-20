@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Query
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from urllib.request import urlopen
 from pydantic import BaseModel
@@ -9,7 +9,13 @@ app = FastAPI()
 activity_url = "http://www.boredapi.com/api/activity/"
 yesno_url = "https://yesno.wtf/api"
 
-origins = ["*"]
+origins = [
+    "http://localhost",
+    "http://localhost:8080",
+    "https://localhost.tiangolo.com",
+    "http://127.0.0.1:8000"
+    "https://mrtv0.github.io/website/"
+]
 
 app.add_middleware(
     CORSMiddleware,
@@ -61,6 +67,8 @@ async def get_yes_no(amount: int, max_amount: int):
     yes = 0
     no = 0
     if max_amount >= amount and amount > 0:
+        if max_amount > 10:
+            return {"fullString": "Too high of a value!", "winner": "Please insert a number 10 or lower!"}
         for i in range(amount):
             response = urlopen(yesno_url)
             yesno_json = json.loads(response.read())
@@ -77,13 +85,8 @@ async def get_yes_no(amount: int, max_amount: int):
         else:
             return {"fullString": strYesNo, "winner": "No wins over yes!"}
     else:
-        return {"fullString": "Invalid value!", "winner": "Please insert a number higher than 0 and lower than " + str(max_amount + 1)}
+        return {"fullString": "Invalid value!", "winner": "Please insert a number higher than 0 and lower than " + str(max_amount + 1) + "!"}
 
 @app.get("/break")
 async def get_coffee():
     return {"text": "Have a coffee!", "picture": "https://coffee.alexflipnote.dev/HrMCgJMACXc_coffee.png"}
-
-@app.get("/item/{item_id}")
-async def get_random_percentage(item_id: int, other_item: int | None = None):
-    total = item_id + other_item
-    return {"text": total}
