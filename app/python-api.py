@@ -9,13 +9,7 @@ app = FastAPI()
 activity_url = "http://www.boredapi.com/api/activity/"
 yesno_url = "https://yesno.wtf/api"
 
-origins = [
-    "http://localhost",
-    "http://localhost:8080",
-    "https://localhost.tiangolo.com",
-    "http://127.0.0.1:8000"
-    "https://mrtv0.github.io/website/"
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -38,22 +32,22 @@ async def get_activity(bored: Bored):
             response = urlopen(activity_urlings)
             activity_json = json.loads(response.read())
             if activity_json.get("activity") == None:
-                return {"activity": "No activity found"}
+                return {"activity": "No activity found!"}
             else:
-                return {"activity": activity_json.get("activity"), "type": activity_json.get("type"), "part_amount": activity_json.get("participants")}
+                return {"activity": activity_json.get("activity") + "!", "type": activity_json.get("type"), "part_amount": activity_json.get("participants")}
         else:
             response = urlopen(activity_urling)
             activity_json = json.loads(response.read())
-            return {"activity": activity_json.get("activity"), "type": activity_json.get("type"), "part_amount": activity_json.get("participants")}
+            return {"activity": activity_json.get("activity") + "!", "type": activity_json.get("type"), "part_amount": activity_json.get("participants")}
     if bored.participants_amount and bored.participants_amount > 0:
         activity_urling = activity_url + "?participants=" + str(bored.participants_amount)
         response = urlopen(activity_urling)
         activity_json = json.loads(response.read())
-        return {"activity": activity_json.get("activity"), "type": activity_json.get("type"), "part_amount": activity_json.get("participants")}
+        return {"activity": activity_json.get("activity") + "!", "type": activity_json.get("type"), "part_amount": activity_json.get("participants")}
     else:
         response = urlopen(activity_url)
         activity_json = json.loads(response.read())
-        return {"activity": activity_json.get("activity"), "type": activity_json.get("type"), "part_amount": activity_json.get("participants")}
+        return {"activity": activity_json.get("activity") + "!", "type": activity_json.get("type"), "part_amount": activity_json.get("participants")}
 
 @app.get("/choice")
 async def get_choice():
@@ -68,7 +62,7 @@ async def get_yes_no(amount: int, max_amount: int):
     no = 0
     if max_amount >= amount and amount > 0:
         if max_amount > 10:
-            return {"fullString": "Too high of a value!", "winner": "Please insert a number 10 or lower!"}
+            return {"error": "Please insert a maximum amount of 10 or lower!"}
         for i in range(amount):
             response = urlopen(yesno_url)
             yesno_json = json.loads(response.read())
@@ -85,7 +79,7 @@ async def get_yes_no(amount: int, max_amount: int):
         else:
             return {"fullString": strYesNo, "winner": "No wins over yes!"}
     else:
-        return {"fullString": "Invalid value!", "winner": "Please insert a number higher than 0 and lower than " + str(max_amount + 1) + "!"}
+        return {"error": "Please insert a number higher than 0 and lower than " + str(max_amount + 1) + "!"}
 
 @app.get("/break")
 async def get_coffee():
