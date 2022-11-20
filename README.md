@@ -21,17 +21,27 @@ Als zowel het type activiteit als het aantal deelnemers aan de activiteit niet m
 
 ![activity_null_null](https://user-images.githubusercontent.com/57659923/202915866-9cae796a-f2b4-4849-a06b-d32db56de9bd.png)
 
+### Aantal deelnemers willekeurig
 Als het type activiteit word meegegeven worden er enkel activiteiten gestuurd van dat specifieke type.
 
 ![activity_sel_null](https://user-images.githubusercontent.com/57659923/202915870-b9cccc6a-e9ea-4b26-b196-4d789db8e805.png)
 
+### Type activiteit willekeurig
 ![activity_null_amount](https://user-images.githubusercontent.com/57659923/202915873-51f9747f-892a-4955-ade4-c6b4a050ce72.png)
+
+### Beide gespecificeerd
 ![activity_sel_amount](https://user-images.githubusercontent.com/57659923/202915878-0194305d-2053-430f-bade-e8ed85f939d1.png)
+
+### Keuze ontvangen
 ![choice](https://user-images.githubusercontent.com/57659923/202915882-313317cd-3262-4a36-88a5-aff035da4215.png)
+
+### Correct gebruik van keuze maker
 ![yesnos_max](https://user-images.githubusercontent.com/57659923/202915886-4806c43e-098c-4f95-b6a3-dec5edcbc685.png)
 
+### Over limiet
 ![yesnos_over_max](https://user-images.githubusercontent.com/57659923/202915895-a982d5bf-ecc6-4300-b920-2c3f848fada4.png)
 
+### Over toegestane maximale waarde
 ![yesnos_over_limit](https://user-images.githubusercontent.com/57659923/202915898-5691e27a-cc43-4686-8fdd-eb12d9f9a932.png)
 ![break](https://user-images.githubusercontent.com/57659923/202915900-58b6b3cb-3d1c-4e6e-8766-027c91faaf7b.png)
 
