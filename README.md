@@ -14,4 +14,4 @@ Mijn GitHub repository voor de front-end: https://github.com/MrTV0/free-time-api
 Mijn hosted front-end link: https://mrtv0.github.io/website/
 
 
-![My Image](free-time-api/screenshots/screencapture-free-time-mrtv0-cloud-okteto-net-docs-2022-11-20-17_30_20.pdf)
+![My Image](screenshots/screencapture-free-time-mrtv0-cloud-okteto-net-docs-2022-11-20-17_30_20.pdf)
