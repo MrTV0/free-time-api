@@ -10,9 +10,9 @@ activity_url = "http://www.boredapi.com/api/activity/"
 yesno_url = "https://yesno.wtf/api"
 
 origins = ["http://localhost",
-    "http://localhost:8080",
-    "https://localhost.tiangolo.com",
-    "http://127.0.0.1:5500",
+           "http://localhost:8080",
+           "https://localhost.tiangolo.com",
+           "http://127.0.0.1:5500",
            "https://mrtv0.github.io",
            "https://mrtv0.github.io.",
            "https://free-time-mrtv0.cloud.okteto.net/",
