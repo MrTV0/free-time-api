@@ -9,8 +9,12 @@ U heeft de mogelijkheid om te filteren op zowel welk type activiteit alsook met 
 
 Op de website is elke functie van de API beschikbaar welke duidelijk verdeeld zijn op activiteit, de keuze maker en pauze.
 
+## Linken
+
 Mijn hosted API link: https://free-time-mrtv0.cloud.okteto.net/  
 Mijn GitHub repository voor de front-end: https://github.com/MrTV0/free-time-api  
 Mijn hosted front-end link: https://mrtv0.github.io/website/
+
+## OpenAPI
 
 ![screencapture-free-time-mrtv0-cloud-okteto-net-docs-2022-11-20-17_30_20](https://user-images.githubusercontent.com/57659923/202914805-84bae13b-4f07-44c4-bc85-039da6032f83.png)
